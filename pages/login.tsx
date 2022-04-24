@@ -31,7 +31,7 @@ const Login = () => {
     <div className="realtive flex h-screen w-screen flex-col bg-black md:items-center md:justify-center md:bg-transparent">
       <Head>
         <title>Netflix - Login</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/netflix.jfif" />
       </Head>
 
       <Image

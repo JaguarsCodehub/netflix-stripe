@@ -1,3 +1,4 @@
+import { DocumentData } from 'firebase/firestore'
 import Image from 'next/image'
 import { useState } from 'react'
 import { useRecoilState } from 'recoil'
@@ -5,7 +6,7 @@ import { modalState, movieState } from '../atoms/modalAtom'
 import { Movie } from '../typing'
 
 interface Props {
-  movie: Movie
+  movie: Movie | DocumentData
 }
 const Thumbnail = ({ movie }: Props) => {
   const [showModal, setShowModal] = useRecoilState(modalState)

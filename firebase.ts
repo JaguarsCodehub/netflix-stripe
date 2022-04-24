@@ -4,12 +4,13 @@ import { getAuth } from 'firebase/auth'
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: 'AIzaSyBEe4lypLKMYx_Ueva4ty5vttfYn5Xtk-0',
-  authDomain: 'netflix-stripe-d5f04.firebaseapp.com',
-  projectId: 'netflix-stripe-d5f04',
-  storageBucket: 'netflix-stripe-d5f04.appspot.com',
-  messagingSenderId: '697383617135',
-  appId: '1:697383617135:web:a94d5c805ed8f5ecca839a',
+  apiKey: 'AIzaSyBuu0YHXOcgmqWLZl-fiMn6lG2wUhdPg8k',
+  authDomain: 'next-firebase-stripe-39bf8.firebaseapp.com',
+  databaseURL: 'https://next-firebase-stripe-39bf8-default-rtdb.firebaseio.com',
+  projectId: 'next-firebase-stripe-39bf8',
+  storageBucket: 'next-firebase-stripe-39bf8.appspot.com',
+  messagingSenderId: '777709922250',
+  appId: '1:777709922250:web:4500ee09dca93e1406d133',
 }
 
 // Initialize Firebase

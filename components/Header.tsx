@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { BellIcon, SearchIcon } from '@heroicons/react/solid'
 import Link from 'next/link'
 import useAuth from '../hooks/useAuth'
+import BasicMenu from './BasicMenu'
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -33,6 +34,8 @@ const Header = () => {
           className="cursor-pointer object-contain"
         />
 
+        <BasicMenu />
+
         <ul className="hidden space-x-4 md:flex">
           <li className="headerLink cursor-default font-semibold text-white hover:text-white">
             Home
@@ -48,14 +51,14 @@ const Header = () => {
         <SearchIcon className="sm hidden h-6 w-6 sm:inline" />
         <p className="hidden lg:inline">Kids</p>
         <BellIcon className="h-6 w-6" />
-        {/* <Link href="/account"> */}
-        <img
-          src="https://rb.gy/g1pwyx"
-          alt=""
-          onClick={() => logout()}
-          className="cursor-pointer rounded"
-        />
-        {/* </Link> */}
+        <Link href="/account">
+          <img
+            src="https://rb.gy/g1pwyx"
+            alt=""
+            // onClick={() => logout()}
+            className="cursor-pointer rounded"
+          />
+        </Link>
       </div>
     </header>
   )
