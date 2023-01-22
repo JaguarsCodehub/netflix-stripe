@@ -3,10 +3,12 @@ import { BellIcon, SearchIcon } from '@heroicons/react/solid'
 import Link from 'next/link'
 import useAuth from '../hooks/useAuth'
 import BasicMenu from './BasicMenu'
+import { useRouter } from 'next/router'
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const { logout } = useAuth()
+  const router = useRouter()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,6 +26,11 @@ const Header = () => {
     }
   }, [])
 
+
+  const handleRecommend = () => {
+    router.push('/recommend')
+  }
+
   return (
     <header className={`${isScrolled && 'bg-[#141414]'}`}>
       <div className={`flex items-center space-x-2 md:space-x-10`}>
@@ -40,7 +47,7 @@ const Header = () => {
           <li className="headerLink cursor-default font-semibold text-white hover:text-white">
             Home
           </li>
-          <li className="headerLink">TV Shows</li>
+          <li onClick={handleRecommend} className="headerLink">Recommend</li>
           <li className="headerLink">Movies</li>
           <li className="headerLink">New & Popular</li>
           <li className="headerLink">My List</li>

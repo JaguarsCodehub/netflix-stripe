@@ -18,7 +18,7 @@
   }
 
   .input {
-    @apply w-full rounded bg-[#333333] px-5 py-3.5 placeholder-[gray] outline-none focus:bg-[#454545];
+        @apply mt-8 w-full text-black text-xl rounded bg-[#eaeaea] px-5 py-1.5 placeholder-[#eaeaea] outline-orange-700 focus:bg-[#efefef];
   }
 
   .bannerButton {

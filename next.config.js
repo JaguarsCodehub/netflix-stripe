@@ -5,6 +5,14 @@ const withTM = require('next-transpile-modules')([
 module.exports = withTM({
   reactStrictMode: true,
   images: {
-    domains: ['rb.gy', 'image.tmdb.org'],
+    domains: [
+      'rb.gy',
+      'image.tmdb.org',
+      'hips.hearstapps.com',
+      'cdn.pastemagazine.com',
+      'sgp1.digitaloceanspaces.com',
+      'wallpaperaccess.com',
+      'images.unsplash.com',
+    ],
   },
 })

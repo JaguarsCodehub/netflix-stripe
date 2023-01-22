@@ -2,13 +2,20 @@ import Button from '@mui/material/Button'
 import Menu from '@mui/material/Menu'
 import MenuItem from '@mui/material/MenuItem'
 import { useState } from 'react'
+import { useRouter } from 'next/router'
 
 export default function BasicMenu() {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
-  const open = Boolean(anchorEl)
+  const open = Boolean(anchorEl);
+
+  const router = useRouter();
 
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget)
+  }
+
+  const handleRoute = () => {
+    router.push('/recommend')
   }
 
   const handleClose = () => {
@@ -42,6 +49,7 @@ export default function BasicMenu() {
         <MenuItem onClick={handleClose}>Movies</MenuItem>
         <MenuItem onClick={handleClose}>New & Popular</MenuItem>
         <MenuItem onClick={handleClose}>My List</MenuItem>
+        <MenuItem onClick={handleRoute}>Recommendation</MenuItem>
       </Menu>
     </div>
   )
